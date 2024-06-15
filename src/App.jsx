@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Todolist from './Todolist';
 const App = () => {
 
-    const [inputList, setInputList] = useState("apple");
+    const [inputList, setInputList] = useState("");
     const [item, setItem] = useState([]);
 
     const itemEvent = (event) => {
@@ -17,6 +17,15 @@ const App = () => {
 
     };
 
+    const deleteItem = (id) => {
+        setItem((olditem)=> {
+            return olditem.filter((arrelem,index)=>{
+                return index !== id;
+            });
+        });
+
+    };
+
     return(
         <>
             <div className="main_div">
@@ -28,10 +37,13 @@ const App = () => {
                     <button onClick={listItem}>+</button>
 
                     <ol>
-                    {item.map((itemval) => {
+                    {item.map((itemval, index) => {
                        return <Todolist 
+                            key={index}
+                            id={index}
                             text ={itemval}
-                        />
+                            onSelect={deleteItem}
+                        />;
                     })}
                     </ol>
                 </div>

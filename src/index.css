@@ -49,13 +49,13 @@ input{
 }
 
 button{
-  min-height: 40px;
+  min-height: 30px;
   border-color: transparent;
   background-color: #8566aa;
   color: #fff;
-  font-size: 30px;
+  font-size: 25px;
   font-family: sans-serif;
-  width: 40px;
+  width: 30px;
   border-radius: 50%;
   outline: none;
   border: none;
@@ -72,6 +72,7 @@ ol{
   margin-top: 30px;
   list-style-type: square;
 
+
 }
 
 ol li{
@@ -84,8 +85,6 @@ ol li{
   align-items: center;
   color: #8566aa;
   text-transform: capitalize;
-  margin-left: 3rem;
-
 }
 
 .todo_style{
@@ -95,23 +94,23 @@ ol li{
   align-items: center;
 }
 
-.todo_style .fa-times{
+.todo_style .fa-circle-xmark{
   width: 20px;
   height: 20px;
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  background-color: #8566aa;
+  padding-left: 2px;
   border-radius: 50%;
   margin: 0 15px 0 35px;
-  color: aliceblue;
+  color: #8566aa;
   box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
 }
-.todo_style .fa-times:hover{
-  background-color: crimson;
+.todo_style .fa-circle-xmark:hover{
+  color: crimson;
 }
 
-.todo_style .fa-times:hover .list_style{
+.todo_style .fa-circle-xmark:hover .list_style{
   background-color: crimson;
 }
